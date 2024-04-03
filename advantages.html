@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="src/css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anoanymous"></script>
+
+  </head>
+  <body class="bg-classic">
+    <div class="d-flex">
+        <div class="side-navbar">
+            <nav>
+            <ul class="nav-list">
+                <li class="logo-li">LOGO</li>
+                <li class="nav-list-item"><a href="index.html"><i class="fa-solid fa-house"></i> Ana Sayfa</a></li>
+                <li class="nav-list-item"><a href="customers.html"><i class="fa-solid fa-network-wired"></i> Müşteriler</a></li>
+                <li class="nav-list-item"><a href="suppliers.html"><i class="fa-solid fa-industry"></i> Tedarikçiler</a></li>
+                <li class="nav-list-item"><button type="button" onclick="navAccordion(220,this.parentElement)" class="nav-button d-flex justify-content-between align-items-center"><div><i class="fa-solid fa-tag"></i>  Ürünler</div> <i class="fa-solid fa-plus"></i></button>
+                        <ul class="nav-list-dropdown" >
+                            <li class="nav-list-dropdown-item"><a href="productList.html">Ürün / Hizmet Tanımları</a></li>
+                            <li class="nav-list-dropdown-item"><a href="warehouses.html">Depolar</a></li>
+                            <li class="nav-list-dropdown-item"><a href="produceProduct.html">Üretim</a></li>
+                            <li class="nav-list-dropdown-item"><a href="catalogs.html">Kataloglar</a></li>
+                            <li class="nav-list-dropdown-item"><a href="variants.html">Ürün Varyantları</a></li>
+                        </ul>
+                    </li>
+            <li class="nav-list-item"><a href="sells.html"><i class="fa-solid fa-cart-shopping"></i> Satışlar</a></li>
+                <li class="nav-list-item"><a href="buying.html"><i class="fa-solid fa-truck"></i> Alışlar</a></li>
+                <li class="nav-list-item"><a href="offers.html"><i class="fa-solid fa-folder-open"></i> Teklifler</a></li>    
+                <li class="nav-list-item"><button type="button" onclick="navAccordion(396,this.parentElement)" class="nav-button d-flex justify-content-between align-items-center"><div><i class="fa-solid fa-turkish-lira-sign"></i> Nakit Yönetimi </div><i class="fa-solid fa-plus"></i></button>
+                    <ul class="nav-list-dropdown">
+                        <li class="nav-list-dropdown-item"><a href="accounts.html">Hesaplarım</a></li>
+                        <li class="nav-list-dropdown-item"><a href="workers.html">Çalışanlar</a></li>
+                        <li class="nav-list-dropdown-item"><a href="expenses.html">Masraflar</a></li>
+                        <li class="nav-list-dropdown-item"><a href="e-invoice.html">Gelen E-Faturalar</a></li>
+                        <li class="nav-list-dropdown-item"><a href="credits.html">Krediler</a></li>
+                        <li class="nav-list-dropdown-item"><a href="fixture.html">Demirbaşlar</a></li>
+                        <li class="nav-list-dropdown-item"><a href="projects.html">Projeler</a></li>
+                        <li class="nav-list-dropdown-item"><a href="checkPortfoy.html">Çek Portföyü</a></li>
+                        <li class="nav-list-dropdown-item"><a href="billPortfoy.html">Senet Portföyü</a></li>
+                    </ul>   
+                </li>
+                <li class="nav-list-item active"><a href="advantages.html"><i class="fa-solid fa-car"></i> Avantajlar</a></li>
+            <li class="nav-list-item">
+                    <button type="button" onclick="navAccordion(308,this.parentElement)" class="nav-button d-flex justify-content-between align-items-center"  ><div><i class="fa-solid fa-gears"></i> Ayarlar</div> <i class="fa-solid fa-plus"></i></button>
+                        <ul class="nav-list-dropdown">
+                            <li class="nav-list-dropdown-item"><a href="users.html">Kullanıcılar</a></li>
+                            <li class="nav-list-dropdown-item"><a href="defines.html">Tanımlar</a></li>
+                            <li class="nav-list-dropdown-item"><a href="e-invoice.html">E-Fatura</a></li>
+                            <li class="nav-list-dropdown-item"><a href="invoice-settings.html">Fatura/İrsaliye Ayarları</a></li>
+                            <li class="nav-list-dropdown-item"><a href="customTemplate.html">Teklif ve Özel Şablonlar</a></li>
+                            <li class="nav-list-dropdown-item"><a href="tagTemplates.html">Etiket Şablonları</a></li>
+                            <li class="nav-list-dropdown-item"><a href="smsSettings.html">SMS Ayarları</a></li>
+                        </ul>
+                </li>
+             <li class="nav-list-item"><button type="button" onclick="navAccordion(176,this.parentElement)" class="nav-button d-flex justify-content-between align-items-center"><div><i class="fa-solid fa-chart-column"></i> Raporlar</div> <i class="fa-solid fa-plus"></i></button>
+                        <ul class="nav-list-dropdown">
+                            <li class="nav-list-dropdown-item"><a href="sellsReport.html">Satışlar-Alışlar</a></li>
+                            <li class="nav-list-dropdown-item"><a href="financalReport.html">Finanas Raporlar</a></li>
+                            <li class="nav-list-dropdown-item"><a href="stockReport.html">Stok Raporları</a></li>
+                            <li class="nav-list-dropdown-item"><a href="customerListReport.html">Müşteri Listesi</a></li>
+                        </ul>
+                </li>
+                <li class="nav-list-item"><a href="help.html"><i class="fa-solid fa-question"></i> Yardım</a></li>
+                <li class="nav-list-item "><a href="fihrist.html"><i class="fa-solid fa-book"></i> Fihrist</a></li>
+                <li class="nav-list-item"><a href="screenLock.html"><i class="fa-solid fa-lock"></i> Ekran Kilidi</a></li>
+            </ul>
+            </nav>
+        </div> 
+    <div class="w-100">
+        <div class="profile-header" style="background-color: #fff; width: 100%;">
+            <div class="d-flex justify-content-between align-content-center">
+            <div style="height: 100%; width: max-content; padding: 15px; font-size: 20px; cursor: pointer;" class="menu-icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="profile d-flex align-items-center" >
+                <div class="date-icon me-4" style="width: max-content; font-size: 30px; cursor: pointer;">
+                <div class="date-number">
+                    22
+                </div>
+                <i class="fa-solid fa-calendar-days" > </i>
+                </div>
+                <div class="me-2">
+                <div class="dropdown">
+                    <button class="dropdown-toggle profile-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                    <img src="" alt="" style="height: 35px; width: 26px;">
+                    <span class="profile-name" >Ali Haydar</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Çıkış</a></li>
+                    <li><a class="dropdown-item" href="#">Şifre Değiştir</a></li>
+                    <li><a class="dropdown-item" href="#">Yeni Şirket Grubu Ekle</a></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    
+
+        <div class="p-3">
+            <h2 class="text-center">BizimHesap Avantajlar Dünyası</h2>
+
+            <div class="container">
+                <div class="row mt-3">
+                    <div class="col-md-3">
+                        <div class="advantage-card mt-1 bg-white d-flex justify-content-center align-items-center flex-column">
+                            <span class="advantage-header my-3">Yurt Dışı Şirket Kuruluşu</span>
+                            <div class="advantege-card-body p-3  text-center">
+                                <img src="src/images/jestiyon.svg" alt="" style="height: 100px; width: 100px; border-radius: 50%; background-color: #EFF0F4;">
+                                <p class="advantege-card-info mt-2">BizimHesap Kullanıcılarına özel Jestiyon'dan yurt dışı şirket kurulumlarında %10 indirim!</p>
+                            </div>
+                            <div class="advantage-card-footer mb-3">
+                                <button type="button" class="btn btn-dark classic-button">Detaylar İçin Tıklayın</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="advantage-card mt-1 bg-white d-flex justify-content-center align-items-center flex-column">
+                            <span class="advantage-header my-3">Sanal POS</span>
+                            <div class="advantege-card-body p-3  text-center">
+                                <img src="src/images/pos_device_logo.svg" alt="" style="height: 100px; width: 100px; border-radius: 50%; background-color: #EFF0F4;">
+                                <p class="advantege-card-info mt-2">
+                                    BizimHesap kullanıcıları artık BDDK onaylı Türkiye'nin en büyük elektronik ödeme kuruluşları ile düşük komisyonlu ve hızlı bir şekilde müşterilerinden online tahsilat alıyor.
+                                </p>
+                            </div>
+                            <div class="advantage-card-footer mb-3">
+                                <button type="button" class="btn btn-dark classic-button">Detaylar İçin Tıklayın</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="advantage-card mt-1 bg-white d-flex justify-content-center align-items-center flex-column">
+                            <span class="advantage-header my-3">Kolay Akaryakıt</span>
+                            <div class="advantege-card-body p-3  text-center">
+                                <img src="src/images/opet_logo.svg" alt="" style="height: 100px; width: 100px; border-radius: 50%; background-color: #EFF0F4;">
+                                <p class="advantege-card-info mt-2">
+                                    Bizimhesap kullanıcıları araçlarından inmeden, hızlıca akaryakıt alabilecek. Üstelik akaryakıt masrafları da otomatik olarak Bizimhesap’a işlenecek.
+                                </p>
+                            </div>
+                            <div class="advantage-card-footer mb-3">
+                                <button type="button" class="btn btn-dark classic-button">Detaylar İçin Tıklayın</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="advantage-card mt-1 bg-white d-flex justify-content-center align-items-center flex-column">
+                            <span class="advantage-header my-3">İndirimli Kargo</span>
+                            <div class="advantege-card-body p-3  text-center">
+                                <img src="src/images/mng_logo.svg" alt="" style="height: 100px; width: 100px; border-radius: 50%; background-color: #EFF0F4;">
+                                <p class="advantege-card-info mt-2">BizimHesap kullanıcıları artık MNG Kargo'dan özel fiyatlar ile kargo gönderimi yapıyor.</p>
+                            </div>
+                            <div class="advantage-card-footer mb-3">
+                                <button type="button" class="btn btn-dark classic-button">Detaylar İçin Tıklayın</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-3    ">
+                        <div class="advantage-card mt-1 bg-white d-flex justify-content-center align-items-center flex-column">
+                            <span class="advantage-header my-3 text-center">Amazon Türkiye’den Özel Avantajlar</span>
+                            <div class="advantege-card-body p-3  text-center">
+                                <img src="src/images/amazon_com_tr_logo.png" alt="" style="height: 100px; width: 100px; border-radius: 50%; background-color: #EFF0F4;">
+                                <p class="advantege-card-info mt-2">
+                                    Amazon Kolay Gönderi ile Stressiz Teslimat
+                                </p>
+                            </div>
+                            <div class="advantage-card-footer mb-3">
+                                <button type="button" class="btn btn-dark classic-button">Detaylar İçin Tıklayın</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="advantage-card mt-1 bg-white d-flex justify-content-center align-items-center flex-column">
+                            <span class="advantage-header my-3">İndirimli Alışveriş</span>
+                            <div class="advantege-card-body p-3  text-center">
+                                <img src="src/images/avansas_logo.svg" alt="" style="height: 100px; width: 100px; border-radius: 50%; background-color: #EFF0F4;">
+                                <p class="advantege-card-info mt-2">
+                                    Bizim Hesaplılara özel!
+                                    ilk alışverişinizde 1000 ₺’ye kadar %25; 1000 ₺ ve üzeri alışverişlerde 250 ₺ sabit indirimle alışveriş fırsatı...
+                                </p>
+                            </div>
+                            <div class="advantage-card-footer mb-3">
+                                <button type="button" class="btn btn-dark classic-button">Detaylar İçin Tıklayın</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="advantage-card mt-1 bg-white d-flex justify-content-center align-items-center flex-column">
+                            <span class="advantage-header my-3">E-İmza</span>
+                            <div class="advantege-card-body p-3  text-center">
+                                <img src="src/images/eguven_logo.svg" alt="" style="height: 100px; width: 100px; border-radius: 50%; background-color: #EFF0F4;">
+                                <p class="advantege-card-info mt-2">
+                                    Bizim Hesap ve E-Güven İşbirliği ile elektronik imzanızı (e-İmza) % 15 indirimli alın, hem şahıs firmanızın e-Fatura başvurusu için, hem de diğer resmi onay ihtiyaçlarınız için kullanın.
+                                </p>
+                            </div>
+                            <div class="advantage-card-footer mb-3">
+                                <button type="button" class="btn btn-dark classic-button">Detaylar İçin Tıklayın</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="advantage-card mt-1 bg-white d-flex justify-content-center align-items-center flex-column">
+                            <span class="advantage-header my-3">İndirimli Kargo</span>
+                            <div class="advantege-card-body p-3  text-center">
+                                <img src="src/images/mng_logo.svg" alt="" style="height: 100px; width: 100px; border-radius: 50%; background-color: #EFF0F4;">
+                                <p class="advantege-card-info mt-2">BizimHesap kullanıcıları artık MNG Kargo'dan özel fiyatlar ile kargo gönderimi yapıyor.</p>
+                            </div>
+                            <div class="advantage-card-footer mb-3">
+                                <button type="button" class="btn btn-dark classic-button">Detaylar İçin Tıklayın</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>  
+    </div>
+        
+    </div>
+
+    <script src="src/js/app.js"></script>
+  </body>
+</html> 

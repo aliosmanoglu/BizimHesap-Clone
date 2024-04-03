@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="src/css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+
+  </head>
+  <body  class="bg-classic">
+    <div class="d-flex">
+        <div class="side-navbar active">
+            <nav>
+            <ul class="nav-list">
+                <li class="logo-li d-flex justify-content-between">
+                    <div>
+                    LOGO 
+                    </div>
+                    <i class="fa-sharp fa-solid fa-xmark close-icon mt-2 d-none"></i>
+              </li>
+                <li class="nav-list-item"><a href="index.html"><i class="fa-solid fa-house"></i> Ana Sayfa</a></li>
+                <li class="nav-list-item"><a href="customers.html"><i class="fa-solid fa-network-wired"></i> Müşteriler</a></li>
+                <li class="nav-list-item"><a href="suppliers.html"><i class="fa-solid fa-industry"></i> Tedarikçiler</a></li>
+                <li class="nav-list-item"><button type="button" onclick="navAccordion(220,this.parentElement)" class="nav-button d-flex justify-content-between align-items-center"><div><i class="fa-solid fa-tag"></i>  Ürünler</div> <i class="fa-solid fa-plus"></i></button>
+                        <ul class="nav-list-dropdown" >
+                            <li class="nav-list-dropdown-item"><a href="productList.html">Ürün / Hizmet Tanımları</a></li>
+                            <li class="nav-list-dropdown-item"><a href="warehouses.html">Depolar</a></li>
+                            <li class="nav-list-dropdown-item"><a href="produceProduct.html">Üretim</a></li>
+                            <li class="nav-list-dropdown-item"><a href="catalogs.html">Kataloglar</a></li>
+                            <li class="nav-list-dropdown-item"><a href="variants.html">Ürün Varyantları</a></li>
+                        </ul>
+                    </li>
+		        <li class="nav-list-item"><a href="sells.html"><i class="fa-solid fa-cart-shopping"></i> Satışlar</a></li>
+                <li class="nav-list-item"><a href="buying.html"><i class="fa-solid fa-truck"></i> Alışlar</a></li>
+                <li class="nav-list-item"><a href="offers.html"><i class="fa-solid fa-folder-open"></i> Teklifler</a></li>    
+                <li class="nav-list-item open"><button type="button" onclick="navAccordion(396,this.parentElement)" class="nav-button d-flex justify-content-between align-items-center"><div><i class="fa-solid fa-turkish-lira-sign"></i> Nakit Yönetimi </div><i class="fa-solid fa-plus"></i></button>
+                    <ul class="nav-list-dropdown" style="height: 396px;">
+                        <li class="nav-list-dropdown-item"><a href="accounts.html">Hesaplarım</a></li>
+                        <li class="nav-list-dropdown-item active"><a href="workers.html">Çalışanlar</a></li>
+                        <li class="nav-list-dropdown-item"><a href="expenses.html">Masraflar</a></li>
+                        <li class="nav-list-dropdown-item"><a href="e-invoice.html">Gelen E-Faturalar</a></li>
+                        <li class="nav-list-dropdown-item"><a href="credits.html">Krediler</a></li>
+                        <li class="nav-list-dropdown-item"><a href="fixture.html">Demirbaşlar</a></li>
+                        <li class="nav-list-dropdown-item"><a href="projects.html">Projeler</a></li>
+                        <li class="nav-list-dropdown-item"><a href="checkPortfoy.html">Çek Portföyü</a></li>
+                        <li class="nav-list-dropdown-item"><a href="billPortfoy.html">Senet Portföyü</a></li>
+                    </ul>   
+                </li>
+                <li><a href="advantages.html"><i class="fa-solid fa-car"></i> Avantajlar</a></li>
+		        <li class="nav-list-item">
+                    <button type="button" onclick="navAccordion(308,this.parentElement)" class="nav-button d-flex justify-content-between align-items-center"  ><div><i class="fa-solid fa-gears"></i> Ayarlar</div> <i class="fa-solid fa-plus"></i></button>
+                        <ul class="nav-list-dropdown">
+                            <li class="nav-list-dropdown-item"><a href="users.html">Kullanıcılar</a></li>
+                            <li class="nav-list-dropdown-item"><a href="defines.html">Tanımlar</a></li>
+                            <li class="nav-list-dropdown-item"><a href="e-invoice.html">E-Fatura</a></li>
+                            <li class="nav-list-dropdown-item"><a href="invoice-settings.html">Fatura/İrsaliye Ayarları</a></li>
+                            <li class="nav-list-dropdown-item"><a href="customTemplate.html">Teklif ve Özel Şablonlar</a></li>
+                            <li class="nav-list-dropdown-item"><a href="tagTemplates.html">Etiket Şablonları</a></li>
+                            <li class="nav-list-dropdown-item"><a href="smsSettings.html">SMS Ayarları</a></li>
+                        </ul>
+                </li>
+ 		        <li class="nav-list-item"><button type="button" onclick="navAccordion(176,this.parentElement)" class="nav-button d-flex justify-content-between align-items-center"><div><i class="fa-solid fa-chart-column"></i> Raporlar</div> <i class="fa-solid fa-plus"></i></button>
+                        <ul class="nav-list-dropdown">
+                            <li class="nav-list-dropdown-item"><a href="sellsReport.html">Satışlar-Alışlar</a></li>
+                            <li class="nav-list-dropdown-item"><a href="financalReport.html">Finansal Raporlar</a></li>
+                            <li class="nav-list-dropdown-item"><a href="stockReport.html">Stok Raporları</a></li>
+                            <li class="nav-list-dropdown-item"><a href="customerListReport.html">Müşteri Listesi</a></li>
+                        </ul>
+                </li>
+                <li class="nav-list-item"><a href="help.html"><i class="fa-solid fa-question"></i> Yardım</a></li>
+                <li class="nav-list-item "><a href="fihrist.html"><i class="fa-solid fa-book"></i> Fihrist</a></li>
+                <li class="nav-list-item"><a href="screenLock.html"><i class="fa-solid fa-lock"></i> Ekran Kilidi</a></li>
+            </ul>
+            </nav>
+        </div> 
+    <div class="w-100">
+        <div class="profile-header" style="background-color: #fff; width: 100%;">
+            <div class="d-flex justify-content-between align-content-center">
+            <div style="height: 100%; width: max-content; padding: 15px; font-size: 20px; cursor: pointer;" class="menu-icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="profile d-flex align-items-center" >
+                <div class="date-icon me-4" style="width: max-content; font-size: 30px; cursor: pointer;">
+                <div class="date-number">
+                    22
+                </div>
+                <i class="fa-solid fa-calendar-days" > </i>
+                </div>
+                <div class="me-2">
+                <div class="dropdown">
+                    <button class="dropdown-toggle profile-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                    <img src="" alt="" style="height: 35px; width: 26px;">
+                    <span class="profile-name" >Ali Haydar</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Çıkış</a></li>
+                    <li><a class="dropdown-item" href="#">Şifre Değiştir</a></li>
+                    <li><a class="dropdown-item" href="#">Yeni Şirket Grubu Ekle</a></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+
+        <div class="worker-profile-page bg-classic p-3">
+            <div class="row">
+                <div class="col-md-6">
+                  <div class="profile-info d-flex p-3 h-100" >
+                    <div class="profile-image">
+                        <img src="https://via.placeholder.com/100x100" alt="">
+                    </div>
+                    <div class="d-flex align-items-start justify-content-center flex-column ms-2 w-100 h-100">
+                        <span class="info-name text-start" style="font-size: 24px; font-weight: bold;">Ali</span>
+                        <span style="font-size: 14px; ">aliguveli0@gmail.com</span>
+                    </div>
+                </div>
+                </div>
+              </div>
+
+            <div class="worker-profile-page-buttons my-3 ">
+                <a href="editWorker.html"><button type="button" class="btn btn-info classic-button"><i class="fa-solid fa-pencil"></i> Güncelle</button></a>
+                
+                <div class="dropdown worker-dropdown">
+                    <button type="button"  class="btn btn-success classic-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-turkish-lira-sign"></i> Ödeme İşlemleri </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="javascript;" data-bs-toggle="modal" data-bs-target="#modal1" data-bs-whatever="@getbootstrap">Maaş Prim Tahakkuku Yap</a></li>
+                        <li><a class="dropdown-item" href="javascript;" data-bs-toggle="modal" data-bs-target="#modal2" data-bs-whatever="@getbootstrap">Ödeme Yap(Maaş/Prim Avans)</a></li>
+                        <li><a class="dropdown-item" href="javascript;" data-bs-toggle="modal" data-bs-target="#modal3" data-bs-whatever="@getbootstrap">Avans İadesi Al</a></li>
+                        <li><a class="dropdown-item" href="javascript;" data-bs-toggle="modal" data-bs-target="#modal4" data-bs-whatever="@getbootstrap">Borç Alacak Fişleri</a></li>
+                    </ul>
+                </div>
+                <button type="button" class="btn btn-warning classic-button" data-bs-toggle="modal" data-bs-target="#modal5" data-bs-whatever="@getbootstrap"><i class="fa-solid fa-plus"></i> Masraf Kaydet</button>
+                <a href="workerExtre.html"><button type="button" class="btn btn-dark classic-button"><i class="fa-solid fa-building-columns"></i> Hesap Ekstresi</button></a>
+                <a href="sendSms.html"><button type="button" class="btn btn-danger classic-buttonx"><i class="fa-solid fa-phone"></i> SMS Gönder</button></a>
+                <a href="workersDocuments.html"><button type="button" class="btn btn-info classic-button"><i class="fa-solid fa-file"></i> Dökümanlar</button></a>
+            </div>
+
+            <div class="accordion accordions" id="accordionOne">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      ÖNCEKİ CARİ İŞLEMLER
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionOne">
+                    <div class="accordion-body">
+                      Accordion içeriği burada
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+        
+    </div>
+
+
+    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content" >
+            <div class="modal-header" style="background-color: #65cea7; color: #fff;">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Maaş/Prim Tahakkuku</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+              <div class="new-document-modal-info p-2" style="background-color: #fcf8e3; color: #8a6d3b;">
+                <p>'Hakedilen Net Maaş' alanına çalışanın hakettiği net maaş/prim tutarını yazın. Kaydettiğinizde hem çalışan için alacak kaydı hem de seçtiğiniz masraf kalemi için gider yazılacaktır.  'Açıklama' alanına 'Şubat maaşı' vb yazabilirsiniz.</p>
+                <p class="fw-bold"> Bu işlem kasa ya da banka hesabınızı etkilemez, sadece çalışanınızı alacaklandırır. Bu işlemden sonra, ödeme yapmak için 'Ödeme Yap' seçeneğini kullanın.</p>
+              </div>
+              <div>
+                <form action="" class="p-3">
+                    <div class="mb-2">
+                        <div class="row">
+                            <div class="col" class="text-end">
+                                <label for="" >Hakediş Tarihi</label>
+                            </div>
+                            <div class="col">
+                                <input type="date" class="classic-input w-100">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="mb-2">
+                        <div class="row">
+                            <div class="col">
+                                <label for="" class="fw-bold">Hakedilen Net Maaş</label>
+                            </div>
+                            <div class="col">
+                                <div class="d-flex">
+                                     <input type="text" class="classic-input w-70">
+                                     <div style="background-color: #eeee;" class="w-100 p-1 d-flex justify-content-center align-items-center">TL</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="mb-2">
+                        <div class="row">
+                            <div class="col">
+                                <label for="">Masraf Kalemi</label>
+                            </div>
+                            <div class="col">
+                                <select name="" id="" class="classic-input w-100">
+                                    <option name="" id="" disabled selected hidden></option>
+                                    <optgroup label="Araç Giderleri">    
+                                        <option value="">Bakım ve Onarım</option>
+                                        <option value="">Bakım ve Onarım</option>
+                                        <option value="">Bakım ve Onarım</option>
+                                    </optgroup>
+                                    <optgroup label="İşletme Giderleri">
+                                        <option value="">Aidat</option>
+                                        <option value="">Elektrik</option>
+                                        <option value="">Isınma</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="mb-2">
+                        <div class="row">
+                            <div class="col" class="text-end">
+                                <label for="" >Açıklama</label>
+                            </div>
+                            <div class="col">
+                                <input type="text" class="classic-input w-100" value="Maaş/Prim Hakedişi">
+                            </div>
+                        </div>
+                        
+                    </div>
+                </form>
+              </div>
+            </div>
+            <div class="modal-footer mt-3">
+              <button type="button" class="classic-button btn btn-danger"><i class="fa-solid fa-check"></i> Maaş Tahakkuku Oluştur</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content" >
+            <div class="modal-header" style="background-color: #65cea7; color: #fff;">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Maaş/Prim/Avans Ödemesi</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+                <div class="new-document-modal-info p-2" style="background-color: #fcf8e3; color: #8a6d3b;">
+                  <p>Ödemeyi kaydettiğinizde sistem seçtiğiniz kasa/banka hesabından 'Ödediğiniz Net Tutar' kadar miktarı çalışana borç yazacaktır.</p>
+                  <p class="fw-bold">  Maaş ya da prim ödemesi yapmadan önce 'Maaş/Prim Tahakkuku Yap' seçeneği ile çalışanınızı alacaklandırmayı ve şirketiniz için masraf oluşturmayı unutmayın.</p>
+                </div>
+                <div>
+                  <form action="" class="p-3">
+                      <div class="mb-2">
+                          <div class="row">
+                              <div class="col" class="text-end">
+                                  <label for="" >Ödeme Tarihi</label>
+                              </div>
+                              <div class="col">
+                                  <input type="date" class="classic-input w-100">
+                              </div>
+                          </div>
+                          
+                      </div>
+                      
+                      <div class="mb-2">
+                          <div class="row">
+                              <div class="col">
+                                  <label for="">Hangi Hesaptan</label>
+                              </div>
+                              <div class="col">
+                                  <select name="" id="" class="classic-input w-100">
+                                      <option name="" id="" disabled selected hidden></option>
+                                      <optgroup label="Kasa">    
+                                          <option value="">TL Kasa (0,00 TL)</option>
+                                      </optgroup>
+                                      <optgroup label="Banka">    
+                                        <option value="">Banka TL Hesabı (0,00 TL)</option>
+                                    </optgroup>
+                                    <optgroup label="Ortaklar">    
+                                        <option value="">Şirketler Ortağı Hesabım (0,00 TL)</option>
+                                    </optgroup>
+                                    <optgroup label="Kredi Kartı">    
+                                        <option value="">Kredi Kartım (0,00 TL)</option>
+                                    </optgroup>
+                                  </select>
+                              </div>
+                          </div>
+                          
+                      </div>
+                      <div class="mb-2">
+                        <div class="row">
+                            <div class="col">
+                                <label for="" class="fw-bold">Ödediğiniz Net Tutar</label>
+                            </div>
+                            <div class="col">
+                                <div class="d-flex">
+                                     <input type="text" class="classic-input w-70">
+                                     <div style="background-color: #eeee;" class="w-100 p-1 d-flex justify-content-center align-items-center">TL</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                      <div class="mb-2">
+                          <div class="row">
+                              <div class="col" class="text-end">
+                                  <label for="" >Açıklama</label>
+                              </div>
+                              <div class="col">
+                                  <input type="text" class="classic-input w-100">
+                              </div>
+                          </div>
+                          
+                      </div>
+                  </form>
+                </div>
+              </div>
+            <div class="modal-footer mt-3">
+              <button type="button" class="classic-button btn btn-danger"><i class="fa-solid fa-check"></i> Ödemeyi Kaydet</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content" >
+            <div class="modal-header" style="background-color: #65cea7; color: #fff;">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Dosya Yükleme</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+                <div>
+                  <form action="" class="p-3">
+                      <div class="mb-2">
+                          <div class="row">
+                              <div class="col" class="text-end">
+                                  <label for="" >İşlem Tarihi</label>
+                              </div>
+                              <div class="col">
+                                  <input type="date" class="classic-input w-100">
+                              </div>
+                          </div>
+                          
+                      </div>
+                      <div class="mb-2">
+                          <div class="row">
+                              <div class="col">
+                                  <label for="" class="fw-bold">Hangi Hesaba</label>
+                              </div>
+                              <div class="col">
+                                <div class="col">
+                                    <select name="" id="" class="classic-input w-100">
+                                        <option name="" id="" disabled selected hidden></option>
+                                        <optgroup label="Kasa">    
+                                            <option value="">TL Kasa (0,00 TL)</option>
+                                        </optgroup>
+                                        <optgroup label="Banka">    
+                                          <option value="">Banka TL Hesabı (0,00 TL)</option>
+                                      </optgroup>
+                                      <optgroup label="Ortaklar">    
+                                          <option value="">Şirketler Ortağı Hesabım (0,00 TL)</option>
+                                      </optgroup>
+                                      <optgroup label="Kredi Kartı">    
+                                          <option value="">Kredi Kartım (0,00 TL)</option>
+                                      </optgroup>
+                                    </select>
+                                </div>
+                              </div>
+                          </div>
+                          
+                      </div>
+                      <div class="mb-2">
+                        <div class="row">
+                            <div class="col" class="text-end">
+                                <label for="" >İade Tutarı</label>
+                            </div>
+                            <div class="col">
+                                <input type="date" class="classic-input w-100">
+                            </div>
+                        </div>
+                        
+                    </div>
+                      <div class="mb-2">
+                          <div class="row">
+                              <div class="col" class="text-end">
+                                  <label for="" >Açıklama</label>
+                              </div>
+                              <div class="col">
+                                  <input type="text" class="classic-input w-100">
+                              </div>
+                          </div>
+                          
+                      </div>
+                  </form>
+                </div>
+              </div>
+            <div class="modal-footer mt-3">
+              <button type="button" class="classic-button btn btn-danger"><i class="fa-solid fa-check"></i> Avans İadesi Kaydet</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content" >
+            <div class="modal-header" style="background-color: #65cea7; color: #fff;">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Dosya Yükleme</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+                <div class="new-document-modal-info p-2" style="background-color: #fcf8e3; color: #8a6d3b;">
+                  <p>Herhangi bir avans, masraf, maaş ya da prim işlemi olmadan çalışanın bakiyesini değiştirmek için borç ya da alacak fişi kaydı oluşturabilirsiniz.</p>
+                  <p >Çalışanın güncel bakiyesi burada gireceğiniz tutar kadar değişecektir..</p>
+                </div>
+                <div>
+                  <form action="" class="p-3">
+                    <div class="mb-2">
+                        <div class="row">
+                            <div class="col" class="text-end">
+                                <label for="" >İşlem Tipi</label>
+                            </div>
+                            <div class="col">
+                                <select name="" id="" class="classic-input w-100">
+                                  <option value="">Alacak Fişi</option>
+                                  <option value="">Borç Fişi</option>
+                                </select>
+                            </div>
+                        </div>
+                      <div class="mb-2">
+                          <div class="row">
+                              <div class="col" class="text-end">
+                                  <label for="" >İşlem Tarihi</label>
+                              </div>
+                              <div class="col">
+                                  <input type="date" class="classic-input w-100">
+                              </div>
+                          </div>
+                          
+                      </div>
+                      <div class="mb-2">
+                          <div class="row">
+                              <div class="col">
+                                  <label for="" class="fw-bold">Tutar</label>
+                              </div>
+                              <div class="col">
+                                  <div class="d-flex">
+                                       <input type="text" class="classic-input w-70">
+                                       <div style="background-color: #eeee;" class="w-100 p-1 d-flex justify-content-center align-items-center">TL</div>
+                                  </div>
+                              </div>
+                          </div>
+                          
+                      </div>
+                      <div class="mb-2">
+                          <div class="row">
+                              <div class="col" class="text-end">
+                                  <label for="" >Açıklama</label>
+                              </div>
+                              <div class="col">
+                                  <input type="date" class="classic-input w-100" value="Maaş/Prim Hakedişi">
+                              </div>
+                          </div>
+                          
+                      </div>
+                  </form>
+                </div>
+              </div>
+            <div class="modal-footer mt-3">
+              <button class="classic-button btn btn-warning" data-bs-dismiss="modal"><i class="fa-solid fa-x"></i> Vazgeç</button>
+              <button type="button" class="classic-button btn btn-danger"><i class="fa-solid fa-check"></i> Kaydet</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content" >
+            <div class="modal-header" style="background-color: #65cea7; color: #fff;">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Dosya Yükleme</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+                <div class="new-document-modal-info p-2" style="background-color: #fcf8e3; color: #8a6d3b;">
+                    <p>Çalışanınızın size getirdiği masrafları buradan girebilirsiniz. Masraf kaydından sonra çalışan alacaklanır.</p>
+                  </div>
+                  <div>
+                    <form action="" class="p-3">
+                        <div class="mb-2">
+                            <div class="row">
+                                <div class="col" class="text-end">
+                                    <label for="" >Masraf Tarihi</label>
+                                </div>
+                                <div class="col">
+                                    <input type="date" class="classic-input w-100">
+                                </div>
+                            </div>        
+                        </div>
+                        <div class="mb-2">
+                          <div class="row">
+                              <div class="col" class="text-end">
+                                  <label for="" >Fiş/Belge No</label>
+                              </div>
+                              <div class="col">
+                                  <input type="text" class="classic-input w-100">
+                              </div>
+                          </div>
+                          
+                        </div>
+                        
+                        <div class="mb-2">
+                          <div class="row">
+                              <div class="col">
+                                  <label for="">Masraf Kalemi</label>
+                              </div>
+                              <div class="col">
+                                  <select name="" id="" class="classic-input w-100">
+                                      <option name="" id="" disabled selected hidden></option>
+                                      <optgroup label="Araç Giderleri">    
+                                          <option value="">Bakım ve Onarım</option>
+                                          <option value="">Bakım ve Onarım</option>
+                                          <option value="">Bakım ve Onarım</option>
+                                      </optgroup>
+                                      <optgroup label="İşletme Giderleri">
+                                          <option value="">Aidat</option>
+                                          <option value="">Elektrik</option>
+                                          <option value="">Isınma</option>
+                                      </optgroup>
+                                  </select>
+                              </div>
+                          </div>                       
+                         </div>
+                      <div class="mb-2">
+                          <div class="row">
+                              <div class="col" class="text-end">
+                                  <label for="" class="fw-bold">Tutar (KDV Dahil)</label>
+                              </div>
+                              <div class="col">
+                                  <input type="text" class="classic-input w-100">
+                              </div>
+                          </div>
+                          
+                      </div>
+                
+                      <div class="mb-2">
+                          <div class="row">
+                              <div class="col" class="text-end">
+                                  <label for="" >KDV(&)</label>
+                              </div>
+                              <div class="col">
+                                  <input type="text" class="classic-input w-100">
+                              </div>
+                          </div>
+                          
+                        </div>
+                
+                        <div class="mb-2">
+                            <div class="row">
+                                <div class="col" class="text-end">
+                                    <label for="" >Açıklama</label>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="classic-input w-100">
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </form>
+                  </div>
+              </div>
+            <div class="modal-footer mt-3">
+              <button class="classic-button btn btn-warning" data-bs-dismiss="modal"><i class="fa-solid fa-x"></i> Vazgeç</button>
+              <button type="button" class="classic-button btn btn-danger"><i class="fa-solid fa-check"></i> Kaydet</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="src/js/app.js"></script>
+  </body>
+</html> 

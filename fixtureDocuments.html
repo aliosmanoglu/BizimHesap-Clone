@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="src/css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+
+  </head>
+  <body  class="bg-classic">
+    <div class="d-flex">
+        <div class="side-navbar active">
+            <nav>
+            <ul class="nav-list">
+                <li class="logo-li d-flex justify-content-between">
+                    <div>
+                    LOGO 
+                    </div>
+                    <i class="fa-sharp fa-solid fa-xmark close-icon mt-2 d-none"></i>
+              </li>
+                <li class="nav-list-item"><a href="index.html"><i class="fa-solid fa-house"></i> Ana Sayfa</a></li>
+                <li class="nav-list-item"><a href="customers.html"><i class="fa-solid fa-network-wired"></i> Müşteriler</a></li>
+                <li class="nav-list-item"><a href="suppliers.html"><i class="fa-solid fa-industry"></i> Tedarikçiler</a></li>
+                <li class="nav-list-item"><button type="button" onclick="navAccordion(220,this.parentElement)" class="nav-button d-flex justify-content-between align-items-center"><div><i class="fa-solid fa-tag"></i>  Ürünler</div> <i class="fa-solid fa-plus"></i></button>
+                        <ul class="nav-list-dropdown" >
+                            <li class="nav-list-dropdown-item"><a href="productList.html">Ürün / Hizmet Tanımları</a></li>
+                            <li class="nav-list-dropdown-item"><a href="warehouses.html">Depolar</a></li>
+                            <li class="nav-list-dropdown-item"><a href="produceProduct.html">Üretim</a></li>
+                            <li class="nav-list-dropdown-item"><a href="catalogs.html">Kataloglar</a></li>
+                            <li class="nav-list-dropdown-item"><a href="variants.html">Ürün Varyantları</a></li>
+                        </ul>
+                    </li>
+		        <li class="nav-list-item"><a href="sells.html"><i class="fa-solid fa-cart-shopping"></i> Satışlar</a></li>
+                <li class="nav-list-item"><a href="buying.html"><i class="fa-solid fa-truck"></i> Alışlar</a></li>
+                <li class="nav-list-item"><a href="offers.html"><i class="fa-solid fa-folder-open"></i> Teklifler</a></li>    
+                <li class="nav-list-item open"><button type="button" onclick="navAccordion(396,this.parentElement)" class="nav-button d-flex justify-content-between align-items-center"><div><i class="fa-solid fa-turkish-lira-sign"></i> Nakit Yönetimi </div><i class="fa-solid fa-plus"></i></button>
+                    <ul class="nav-list-dropdown" style="height: 396px;"> 
+                        <li class="nav-list-dropdown-item"><a href="accounts.html">Hesaplarım</a></li>
+                        <li class="nav-list-dropdown-item"><a href="workers.html">Çalışanlar</a></li>
+                        <li class="nav-list-dropdown-item"><a href="expenses.html">Masraflar</a></li>
+                        <li class="nav-list-dropdown-item"><a href="e-invoice.html">Gelen E-Faturalar</a></li>
+                        <li class="nav-list-dropdown-item"><a href="credits.html">Krediler</a></li>
+                        <li class="nav-list-dropdown-item active"><a href="fixture.html">Demirbaşlar</a></li>
+                        <li class="nav-list-dropdown-item"><a href="projects.html">Projeler</a></li>
+                        <li class="nav-list-dropdown-item"><a href="checkPortfoy.html">Çek Portföyü</a></li>
+                        <li class="nav-list-dropdown-item"><a href="billPortfoy.html">Senet Portföyü</a></li>
+                    </ul>   
+                </li>
+                <li><a href="advantages.html"><i class="fa-solid fa-car"></i> Avantajlar</a></li>
+		        <li class="nav-list-item">
+                    <button type="button" onclick="navAccordion(308,this.parentElement)" class="nav-button d-flex justify-content-between align-items-center"  ><div><i class="fa-solid fa-gears"></i> Ayarlar</div> <i class="fa-solid fa-plus"></i></button>
+                        <ul class="nav-list-dropdown">
+                            <li class="nav-list-dropdown-item"><a href="users.html">Kullanıcılar</a></li>
+                            <li class="nav-list-dropdown-item"><a href="defines.html">Tanımlar</a></li>
+                            <li class="nav-list-dropdown-item"><a href="e-invoice.html">E-Fatura</a></li>
+                            <li class="nav-list-dropdown-item"><a href="invoice-settings.html">Fatura/İrsaliye Ayarları</a></li>
+                            <li class="nav-list-dropdown-item"><a href="customTemplate.html">Teklif ve Özel Şablonlar</a></li>
+                            <li class="nav-list-dropdown-item"><a href="tagTemplates.html">Etiket Şablonları</a></li>
+                            <li class="nav-list-dropdown-item"><a href="smsSettings.html">SMS Ayarları</a></li>
+                        </ul>
+                </li>
+ 		        <li class="nav-list-item"><button type="button" onclick="navAccordion(176,this.parentElement)" class="nav-button d-flex justify-content-between align-items-center"><div><i class="fa-solid fa-chart-column"></i> Raporlar</div> <i class="fa-solid fa-plus"></i></button>
+                        <ul class="nav-list-dropdown">
+                            <li class="nav-list-dropdown-item"><a href="sellsReport.html">Satışlar-Alışlar</a></li>
+                            <li class="nav-list-dropdown-item"><a href="financalReport.html">Finansal Raporlar</a></li>
+                            <li class="nav-list-dropdown-item"><a href="stockReport.html">Stok Raporları</a></li>
+                            <li class="nav-list-dropdown-item"><a href="customerListReport.html">Müşteri Listesi</a></li>
+                        </ul>
+                </li>
+                <li class="nav-list-item"><a href="help.html"><i class="fa-solid fa-question"></i> Yardım</a></li>
+                <li class="nav-list-item "><a href="fihrist.html"><i class="fa-solid fa-book"></i> Fihrist</a></li>
+                <li class="nav-list-item"><a href="screenLock.html"><i class="fa-solid fa-lock"></i> Ekran Kilidi</a></li>
+            </ul>
+            </nav>
+        </div> 
+    <div class="w-100">
+        <div class="profile-header" style="background-color: #fff; width: 100%;">
+            <div class="d-flex justify-content-between align-content-center">
+            <div style="height: 100%; width: max-content; padding: 15px; font-size: 20px; cursor: pointer;" class="menu-icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="profile d-flex align-items-center" >
+                <div class="date-icon me-4" style="width: max-content; font-size: 30px; cursor: pointer;">
+                <div class="date-number">
+                    22
+                </div>
+                <i class="fa-solid fa-calendar-days" > </i>
+                </div>
+                <div class="me-2">
+                <div class="dropdown">
+                    <button class="dropdown-toggle profile-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                    <img src="" alt="" style="height: 35px; width: 26px;">
+                    <span class="profile-name" >Ali Haydar</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Çıkış</a></li>
+                    <li><a class="dropdown-item" href="#">Şifre Değiştir</a></li>
+                    <li><a class="dropdown-item" href="#">Yeni Şirket Grubu Ekle</a></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+        <div class="worker-documnets-page bg-classic p-3">
+            <div class="workers-documents-buttons">
+                <button type="button" class="btn btn-success classic-button" data-bs-toggle="modal" data-bs-target="#modal1" data-bs-whatever="@getbootstrap"><i class="fa-solid fa-plus"></i> Yeni Döküman Ekle</button>
+                <a href="fixtureInfo.html"><button type="button" class="btn btn-warning classic-button"><i class="fa-solid fa-arrow-left"></i> Geri Dön</button></a>
+            </div>
+
+            <div class="row my-3">
+                <div class="col-md-6">
+                  <div class="profile-info d-flex p-3 h-100" >
+                    <div class="profile-image">
+                        <img src="https://via.placeholder.com/100x100" alt="">
+                    </div>
+                    <div class="d-flex align-items-start justify-content-center flex-column ms-2 w-100 h-100">
+                        <span class="info-name text-start" style="font-size: 24px; font-weight: bold;">Demirbaş 1</span>
+                        
+                    </div>
+                </div>
+                </div>
+              </div>
+
+              <div class="row my-3">
+                <div class="col-md-6">
+                    <div class="document-list-div">
+               
+                        <ul class="document-list p-3">
+                            <li>
+                                <div class="document-item p-3">
+                                    <div class="d-flex justify-content-between my-2">
+                                        <span style="font-size: 18px; font-weight: 700;">Belge.docx</span>
+                                        <span style="font-size: 18px; font-weight: 700;">27.06.2023</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <span>asd</span>
+                                        <div>
+                                            <button class="btn btn-success classic-button mx-2"><i class="fa-solid fa-download"></i> İndir</button>
+                                            <button class="btn btn-warning classic-button mx-2" data-bs-toggle="modal" data-bs-target="#modal2" data-bs-whatever="@getbootstrap"><i class="fa-solid fa-pencil"></i> Güncelle</button>
+                                            <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                  <div class="modal-content" >
+                                                    <div class="modal-header" style="background-color: #65cea7; color: #fff;">
+                                                      <h1 class="modal-title fs-5" id="exampleModalLabel">Açıklama Güncelleme</h1>
+                                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body p-0">
+                                                        <form action="" class="my-2 text-center p-3">
+                                                            <div class="row">
+                                                                <div class="col-4 text-end">
+                                                                    <label for="" style="color: #7a7676;">Dosya Açıklaması:</label>
+                                                                </div>
+                                                                <div class="col-8 text-start">
+                                                                    <textarea name="" id="" class="w-100 h-100"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="modal-footer mt-3">
+                                                      <button class="classic-button btn btn-warning" data-bs-dismiss="modal"><i class="fa-solid fa-x"></i> Vazgeç</button>
+                                                      <button type="button" class="classic-button btn btn-success"><i class="fa-solid fa-check"></i> Yükle</button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            <button class="btn btn-danger classic-button mx-2"><i class="fa-solid fa-x"></i> Sil</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    </div>
+
+    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content" >
+            <div class="modal-header" style="background-color: #65cea7; color: #fff;">
+              <h1 class="modal-title fs-5 p-0" id="exampleModalLabel">Dosya Yükleme</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+              <div class="new-document-modal-info p-2" style="background-color: #fcf8e3;">
+                <p>Uzantısı doc, docx, xls, xlsx, pdf, jpg, gif, png, txt olan dosyaları yükleyebilirsiniz.
+                    Dosya boyu 5MB geçmemelidir.</p>
+              </div>
+              <div>
+                <form action="" class="text-end p-3">
+                    <div class="row text-center">
+                        <div class="col-6">
+                            <label for="" style="font-weight: bolder; color: #7a7676;">Yüklenecek Dosya</label>
+                            
+                        </div>
+                        <div class="col-6">
+                            <input type="file">
+                        </div>
+                    </div>
+                    <div class="row text-center my-2">
+                        <div class="col-6">
+                            <label for="" style="font-weight: bolder; color: #7a7676;">Dosya Açıklaması :</label>
+                        </div>
+                        <div class="col-6">
+                            <textarea name="" id="" style="width: 100%; height: 100%;"></textarea>
+                        </div>
+                    </div>
+                </form>
+              </div>
+            </div>
+            <div class="modal-footer mt-3">
+              <button class="classic-button btn btn-warning" data-bs-dismiss="modal"><i class="fa-solid fa-x"></i> Vazgeç</button>
+              <button type="button" class="classic-button btn btn-success"><i class="fa-solid fa-check"></i> Yükle</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="src/js/app.js"></script>
+  </body>
+</html> 
